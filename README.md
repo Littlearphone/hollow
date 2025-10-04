@@ -1,16 +1,38 @@
-# Hollow 
-## https://bloodorca.github.io/hollow/
-Online save file editor. 
+# aaa
 
-The steps behind decryption and encryption were taken from [@KayDeeTee](https://github.com/KayDeeTee)'s [Hollow Knight Save Manager](https://github.com/KayDeeTee/Hollow-Knight-SaveManager). 
+This template should help get you started developing with Vue 3 in Vite.
 
+## Recommended IDE Setup
 
-### Instructions 
-1. Make a backup of your save file. In the Hollow Knight save folder, I'll rename `user1.dat` to `user1_a.dat`. 
-1. Select or drag the source save file into the online utility. I will drag in `user1_a.dat` as my source. 
-1. The online editor should show you JSON with `"key": value` pairs. Modify it to your liking. I will change my `"geo"` to `777`. 
-1. Download your new **modified** save file. Once downloaded, I will rename it to "user1.dat" and move it to my Hollow Knight save folder. 
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
+## Recommended Browser Setup
 
-### Where is my save folder?
-The Hollow Knight save folder may be different depending on your OS (windows, mac, linux) and game platform (steam, gog, etc). Google it like so `hollow knight mac steam save file location `. 
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+pnpm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+pnpm dev
+```
+
+### Compile and Minify for Production
+
+```sh
+pnpm build
+```

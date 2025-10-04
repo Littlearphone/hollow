@@ -1,10 +1,10 @@
-var BASE64_ARRAY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".split("").map(c => c.charCodeAt(0))
-var BASE64_ENCODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [i, ord]))
-var BASE64_DECODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [ord, i]))
+const BASE64_ARRAY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".split("").map(c => c.charCodeAt(0))
+const BASE64_ENCODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [i, ord]))
+const BASE64_DECODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [ord, i]))
 
 export function encode(buffer){
     buffer = new Uint8Array(buffer).slice()
-    var output = new Uint8Array(Math.ceil(Math.ceil(buffer.length * 4 / 3) / 4) * 4)
+    const output = new Uint8Array(Math.ceil(Math.ceil(buffer.length * 4 / 3) / 4) * 4)
     let continuous = Math.floor(buffer.length / 3) * 3
 
     for (let i = 0; i < continuous; i+=3){
@@ -35,7 +35,7 @@ export function decode(buffer){
     buffer = new Uint8Array(buffer).slice()
     buffer = buffer.map(v => BASE64_DECODE_TABLE.get(v))
     { let p = buffer.indexOf(64); buffer = buffer.subarray(0, p != -1 ? p : buffer.length)}
-    var output = new Uint8Array(3 * buffer.length / 4) 
+    const output = new Uint8Array(3 * buffer.length / 4) 
     let continuous = Math.floor(buffer.length / 4) * 4 
     for (let i = 0; i < continuous; i+=4){
         let k = 3 * i / 4 
